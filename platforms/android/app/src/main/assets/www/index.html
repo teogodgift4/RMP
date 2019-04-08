@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>RMP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="jquery3.3.min.js" type="text/javascript"></script>
+        <script src="jquery.mobile-1.4.5.min.js" type="text/javascript"></script>
+        <link href="jquery.mobile-1.4.5.min.css" rel="stylesheet" type="text/css"/>
+        
+        <link href="index.css" rel="stylesheet" type="text/css"/>
+        <script src="index.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div data-role="page" id="frontPage">
+
+	<div data-role="header">
+		<div data-role="navbar" data-grid="c">
+    <ul>
+        <li><a href="#frontPage" data-icon="home">Home</a></li>
+        <li><a href="#services" data-icon="gear">Services</a></li>
+        <li><a href="#contactPage" data-icon="mail">Contact</a></li>
+        <li><a href="#mapPage" data-icon="location" onclick="checkInternet();">Map</a></li>
+    </ul>
+</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+	<div class="loader"></div>	
+	</div><!-- /content -->
+        
+        
+
+</div><!-- /page -->
+
+<div data-role="page" id="services">
+
+	<div data-role="header">
+		<div data-role="navbar" data-grid="c">
+    <ul>
+        <li><a href="#frontPage" data-icon="home">Home</a></li>
+        <li><a href="#services" data-icon="gear">Services</a></li>
+        <li><a href="#contactPage" data-icon="mail">Contact</a></li>
+        <li><a href="#mapPage" data-icon="location" onclick="checkInternet();">Map</a></li>
+    </ul>
+</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content">
+		<ul data-role="listview" data-inset="true" data-divider-theme="a">
+    <li data-role="list-divider">Επισκευές</li>
+    <li><a href="#laptopRepairDialog"  data-rel="popup" data-transition="pop"><img src="img/laptop-repair.png" alt="" class="ui-li-icon"/>Laptop</a></li>
+    <li><a href="#computerRepairDialog" data-rel="popup" data-transition="pop"><img src="img/computer.png" alt="" class="ui-li-icon"/>Η/Υ</a></li>
+    <li><a href="#tabletRepairDialog" data-rel="popup" data-transition="pop"><img src="img/tablet-repair.png" alt="" class="ui-li-icon"/>Tablet</a></li>
+    <li><a href="#smartphonesRepairDialog" data-rel="popup" data-transition="pop"><img src="img/shattered-phone.png" alt="" class="ui-li-icon"/>Κινητά Τηλέφωνα</a></li>
+    <li><a href="#gadgetsRepairDialog" data-rel="popup" data-transition="pop"><img src="img/ilektrikes-mikrosuskeues.png" alt="" class="ui-li-icon"/>Μικροσυσκευές</a></li>
+    <li data-role="list-divider">Ξεκλείδωμα</li>
+    <li><a href="#emailDialog" data-rel="popup" data-transition="pop"><img src="img/gmail.png" alt="" class="ui-li-icon"/>Email</a></li>
+    <li><a href="#androidDialog" data-rel="popup" data-transition="pop"><img src="img/android-unlock-root.png" alt="" class="ui-li-icon"/>Android</a></li>
+    <li><a href="#appleDialog" data-rel="popup" data-transition="pop"><img src="img/apple-logo-png-transparent-background.png" alt="" class="ui-li-icon"/>IOS</a></li>
+    <li data-role="list-divider">Πωλήσεις</li>
+    <li><a href="#laptopSell" data-rel="popup" data-transition="pop"><img src="img/macbook.png" alt="" class="ui-li-icon"/>Laptop</a></li>
+    <li><a href="#tabletSell" data-rel="popup" data-transition="pop"><img src="img/tablets.png" alt="" class="ui-li-icon"/>Tablet</a></li>
+    <li><a href="#mobileSell" data-rel="popup" data-transition="pop"><img src="img/cell-phones-png-hd--1024.png" alt="" class="ui-li-icon"/>Κινητά Τηλέφωνα</a></li>
+    <li><a href="#gadgetsSell" data-rel="popup" data-transition="pop"><img src="img/gadgets.png" alt="" class="ui-li-icon"/>Gadgets</a></li>
+</ul>
+	</div><!-- /content -->
+        <div data-role="popup" id="smartphonesRepairDialog">
+            <ul data-role="listview" data-inset="true" data-divider-theme="a">
+        <li><img src="img/freeRepair.jpg" alt="" class="ui-li-icon"/>Δωρεάν Διάγνωση Βλάβης</li>
+        <li><img src="img/screenRepair.jpg" alt="" class="ui-li-icon"/>Επισκευή Σπασμένης Οθόνης</li>
+        <li><img src="img/back.jpg" alt="" class="ui-li-icon"/>Πίσω Όψη</li>
+        <li><img src="img/onOff.jpg" alt="" class="ui-li-icon"/>Διακόπτης ON/OFF</li>
+        <li><img src="img/vibration.jpg" alt="" class="ui-li-icon"/>Δόνηση</li>
+        <li><img src="img/battery.jpg" alt="" class="ui-li-icon"/>Μπαταρία</li>
+        <li><img src="img/baseCon.jpg" alt="" class="ui-li-icon"/>Βάση Σύνδεσης</li>
+        <li><img src="img/mobileMotherBoard.jpg" alt="" class="ui-li-icon"/>Μητρική Πλακέτα</li>
+        <li><img src="img/centralButton.jpg" alt="" class="ui-li-icon"/>Κεντρικό Πλήκτρο</li>
+        <li><img src="img/wet.jpg" alt="" class="ui-li-icon"/>Βρεγμένη Συσκευή</li>
+        <li><img src="img/sim.jpg" alt="" class="ui-li-icon"/>Αναγνώστης SIM</li>
+        <li><img src="img/voice.jpg" alt="" class="ui-li-icon"/>Πλήκτρα Έντασης Ήχου</li>
+        <li><img src="img/mute.jpg" alt="" class="ui-li-icon"/>Διακόπτης Σίγασης</li>
+        <li><img src="img/akoustiko.jpg" alt="" class="ui-li-icon"/>Ακουστικό</li>
+        <li><img src="img/microphone.jpg" alt="" class="ui-li-icon"/>Μικρόφωνο</li>
+        <li><img src="img/megaphone.jpg" alt="" class="ui-li-icon"/>Μεγάφωνο</li>
+        <li><img src="img/aigitita.jpg" alt="" class="ui-li-icon"/>Αισθητήρας Αιγύτητας</li>
+        <li><img src="img/akoustika.jpg" alt="" class="ui-li-icon"/>Υποδοχή Ακουστικών</li>
+        <li><img src="img/cameraB.jpg" alt="" class="ui-li-icon"/>Πίσω Κάμερα</li>
+        <li><img src="img/cameraA.jpg" alt="" class="ui-li-icon"/>Μπροστά Κάμερα</li>
+        <li><img src="img/glassB.jpg" alt="" class="ui-li-icon"/>Γυαλί Πίσω Κάμερα</li>
+        <li><img src="img/flash.jpg" alt="" class="ui-li-icon"/>Φλάς</li>
+        </ul>
+    </div>
+
+        <div data-role="popup" id="laptopRepairDialog">
+            <ul data-role="listview" data-inset="true" data-divider-theme="a">
+        <li><img src="img/freeRepair.jpg" alt="" class="ui-li-icon"/>Δωρεάν Διάγνωση Βλάβης</li>
+        <li><img src="img/scrennLaptop.jpg" alt="" class="ui-li-icon"/>Αντικατάσταση Οθόνης</li>
+        <li><img src="img/windows.jpg" alt="" class="ui-li-icon"/>Εγκατάσταση Windows</li>
+        <li><img src="img/virus.jpg" alt="" class="ui-li-icon"/>Αφαίρεση Ιών</li>
+        <li><img src="img/feed.jpg" alt="" class="ui-li-icon"/>Βύσμα Τροφοδοσίας</li>
+        <li><img src="img/graphics.jpg" alt="" class="ui-li-icon"/>Κάρτα Γραφικών</li>
+        <li><img src="img/hd.jpg" alt="" class="ui-li-icon"/>Σκλήρός Δίσκος</li>
+        <li><img src="img/upgrade.jpg" alt="" class="ui-li-icon"/>Βελτίωση Λάπτοπ</li>
+        <li><img src="img/database.jpg" alt="" class="ui-li-icon"/>Ανάκτηση Δεδομένων</li>
+        <li><img src="img/heat.jpg" alt="" class="ui-li-icon"/>Υπερθέρμανση</li>
+        <li><img src="img/keyboard.jpg" alt="" class="ui-li-icon"/>Πληκτρολόγιο</li>
+        <li><img src="img/usb.jpg" alt="" class="ui-li-icon"/>Θύρα USB</li>
+        <li><img src="img/ram.jpg" alt="" class="ui-li-icon"/>Αναβάθμηση Μνήμης</li>
+        <li><img src="img/inverter.jpg" alt="" class="ui-li-icon"/>Inverter</li>
+        <li><img src="img/laptopUp.jpg" alt="" class="ui-li-icon"/>Εγκατάσταση Προγραμμάτων</li>
+        </ul>
+    </div>
+        
+        <div data-role="popup" id="computerRepairDialog">
+            <ul data-role="listview" data-inset="true" data-divider-theme="a">
+        <li><img src="img/freeRepair.jpg" alt="" class="ui-li-icon"/>Δωρεάν Διάγνωση Βλάβης</li>
+        <li><img src="img/windows.jpg" alt="" class="ui-li-icon"/>Εγκατάσταση Windows</li>
+        <li><img src="img/virus.jpg" alt="" class="ui-li-icon"/>Αφαίρεση Ιών</li>
+        <li><img src="img/upgrade.jpg" alt="" class="ui-li-icon"/>Βελτίωση Η/Υ</li>
+        <li><img src="img/database.jpg" alt="" class="ui-li-icon"/>Ανάκτηση Δεδομένων</li>
+        <li><img src="img/laptopUp.jpg" alt="" class="ui-li-icon"/>Εγκατάσταση Προγραμμάτων</li>
+        <li><img src="img/upgradeC.jpg" alt="" class="ui-li-icon"/>Αναβάθμιση Η/Υ</li>
+        <li><img src="img/clean.jpg" alt="" class="ui-li-icon"/>Καθαρισμός Η/Υ</li>
+        <li><img src="img/antivirus.jpg" alt="" class="ui-li-icon"/>Εγκατάσταση Προστασίας Ιών</li>
+        </ul>
+    </div>
+        
+        <div data-role="popup" id="tabletRepairDialog">
+            <ul data-role="listview" data-inset="true" data-divider-theme="a">
+        <li><img src="img/freeRepair.jpg" alt="" class="ui-li-icon"/>Δωρεάν Διάγνωση Βλάβης</li>
+        <li><img src="img/screenRepair.jpg" alt="" class="ui-li-icon"/>Επισκευή Σπασμένης Οθόνης</li>
+        <li><img src="img/wet.jpg" alt="" class="ui-li-icon"/>Βρεγμένη Συσκευή</li>
+        <li><img src="img/microphone.jpg" alt="" class="ui-li-icon"/>Μικρόφωνο</li>
+        <li><img src="img/megaphone.jpg" alt="" class="ui-li-icon"/>Μεγάφωνο</li>
+        <li><img src="img/akoustika.jpg" alt="" class="ui-li-icon"/>Υποδοχή Ακουστικών</li>
+        <li><img src="img/feed.jpg" alt="" class="ui-li-icon"/>Βύσμα Τροφοδοσίας</li>
+        </ul>
+    </div>
+
+        
+        <div data-role="popup" id="gadgetsRepairDialog">
+            <div data-role="header">
+            <h2 style="">Επισκεύη Μικροσυσκευών</h2>
+            </div>
+            <p>Για την επισκευή των μικροσυσκευών σας έχετε τους κατάλληλους τεχνικούς στη διάθεσή σας στο Repair Mobile Phones. Εγγύηση μας οτι θα μείνετε απόλυτα ικανοποιημένοι απο το αποτέλεσμα! Όταν μιλάμε για μικροσυσκευές εννοούμε σίδερα, μπλέντερ, σεσουάρ, ξυριστικές μηχανές, κτλ. Κατέχουμε την κατάλληλη εξειδίκευση και τεχνική γνώση για να καλύψουμε τις ανάγκες σας. Δωρεάν διάγνωση βλάβης!</p>
+        </div>
+        
+        <div data-role="popup" id="emailDialog">
+            <div data-role="header">
+            <h2>Ξεκλείδωμα Email</h2>
+            </div>
+            <p>Εάν μετά απο επαναφορά εργοστασιακών ρυθμίσεων ή απώλεια μοτίβου κλπ. δεν μπορείτε να προχωρήσετε στα παρακάτω βήματα για να ανοίξει το κινητό σας τηλέφωνο λόγο του Email που έχετε δηλώσει στην συσκευή σας τότε μπορείτε να μας επισκεφτείτε στο κατάστημά μας Repair Mobile Phones για να σας δώσουμε την λύση που ζητάτε.</p>
+        </div>
+        
+        <div data-role="popup" id="androidDialog">
+            <div data-role="header">
+            <h2>Ξεκλείδωμα Android</h2>
+            </div>
+            <p>Εάν έχετε ξεχάσει τον κωδικό Facebook, Email, κλπ. τότε μπορείτε να επισκεφτείτε το κατάστημα Repair Mobile Phones για να σας δώσουμε την λύση που ζητάτε.</p>
+        </div>
+        
+        <div data-role="popup" id="appleDialog">
+            <div data-role="header">
+            <h2>Ξεκλείδωμα IOS</h2>
+            </div>
+            <p>Εάν έχετε ξεχάσει το Apple ID σας ή το μοτίβο, κωδικό πρόσβασης κλπ τότε μπορείτε να επισκεφτείτε το κατάστημα Repair Mobile Phones για να σας δώσουμε την λύση που ζητάτε.</p>
+        </div>
+        
+        <div data-role="popup" id="laptopSell">
+            <div data-role="header">
+                <h2>Laptops</h2>
+                </div>
+                <p>Καινούργια ή refubrished laptops και Η/Υ. Σε άριστη κατάσταση. Εργαστείτε, παίξτε άνετα τα αγαπημένα σας παιχνίδια. Σερφάρετε στο διαδύκτιο άνετα.</p>
+        </div>
+        
+        <div data-role="popup" id="gadgetsSell">
+            <div data-role="header">
+                <h2>Gadgets</h2>
+            </div>
+            <p>Μεγάλη ποικιλία απο θήκες, tempered glass, ακουστικά, μικρόφωνα, mouse, keyboard, Bluetooth ηχεία και πολλά άλλα έξυπνα δώρα.</p>
+        </div>
+        
+        <div data-role="popup" id="mobileSell">
+            <div data-role="header">
+                <h2>Μεγάλη γκάμα κινητών τηλεφώνων</h2>
+            </div>
+            <ul data-role="listview" data-inset="true">
+                <li>ALCATEL</li>
+                <li>APPLE</li>
+                <li>BLACKBERRY</li>
+                <li>CATERPILLAR</li>
+                <li>HTC</li>
+                <li>HUAWEI</li>
+                <li>SAMSUNG</li>
+                <li>XIAOMI</li>
+                <li>LG</li>
+                <li>MICROSOFT</li>
+                <li>MOTOROLA</li>
+                <li>NOKIA</li>
+                <li>SONY</li>
+            </ul>
+            <div data-role="footer">
+                <p>Ετοιμοπαράδοτα.</p>
+                <p>Απίστευτες τιμές.</p>
+            </div>
+        </div>
+        
+         <div data-role="popup" id="tabletSell">
+            <div data-role="header">
+                <h2>Μεγάλη γκάμα tablets</h2>
+            </div>
+            <ul data-role="listview" data-inset="true">
+                <li>APPLE</li>
+                <li>HUAWEI</li>
+                <li>SAMSUNG</li>
+                <li>LENOVO</li>
+                <li>MICROSOFT</li>
+                <li>MLS</li>
+                <li>BITMORE</li>
+                <li>TOSHIBA</li>
+            </ul>
+            <div data-role="footer">
+                <p>Ετοιμοπαράδοτα.</p>
+                <p>Απίστευτες τιμές.</p>
+            </div>
+        </div>
+        
+</div><!-- /page -->
+
+<div data-role="page" id="contactPage">
+
+	<div data-role="header">
+		<div data-role="navbar" data-grid="c">
+    <ul>
+        <li><a href="#frontPage" data-icon="home">Home</a></li>
+        <li><a href="#services" data-icon="gear">Services</a></li>
+        <li><a href="#contactPage" data-icon="mail">Contact</a></li>
+        <li><a href="#mapPage" data-icon="location" onclick="checkInternet();">Map</a></li>
+    </ul>
+</div><!-- /navbar -->
+	</div><!-- /header -->
+
+	<div role="main" class="ui-content" style="border-bottom: none;">
+            <form id="contactForm" onsubmit="sendEmail();">
+                <label for="email">Email:</label>
+                <input required type="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" /><br>
+                <label for="name">Όνομα:</label>
+                <input type="text" id="name" /><br>
+                <label for="surname">Επίθετο:</label>
+                <input type="text" id="surname" /><br>
+                <label for="tel">Τηλ:</label>
+                <input type="tel" pattern="^[0-9-+s()]*$" id="tel" /><br>
+                <label for="message">Μήνυμα:</label>
+                <textarea id="message" required ></textarea>
+                <input id="sentButton" type="submit" value="Αποστολή" />
+            </form>
+	</div><!-- /content -->
+
+	<div data-role="footer" style="border:none;">
+		<h4 style="text-align: center;">Χρυσοστόμου Σμύρνης 3, Σέρρες</h4>
+              <div> <a href="tel:23210 51190" style="background-color: inherit; text-decoration: none; color:black;"><p style="text-align:center; display:block; background-color:transparent;">23210 51190</p></a></div>
+              <div> <a href="tel:6987182233" style="background-color: inherit; text-decoration: none; color:black;"><p style="text-align:center;">6987182233</p></a></div>
+                <a href="https://el-gr.facebook.com/petroula.pragkaloudi/" style="border:0; background-color: inherit; text-decoration: none;"><img id="facebook" class="blink" style="position:relative; border:0; width:50%; margin: 0 auto; display:block;" src="img/facebook.jpg" alt=""/></a>
+	</div><!-- /footer -->
+</div><!-- /page -->
+
+<div data-role="page" id="mapPage">
+
+	<div data-role="header">
+		<div data-role="navbar" data-grid="c">
+    <ul>
+        <li><a href="#frontPage" data-icon="home">Home</a></li>
+        <li><a href="#services" data-icon="gear">Services</a></li>
+        <li><a href="#contactPage" onclick="linkingFacebook();"  data-icon="mail">Contact</a></li>
+        <li><a href="#mapPage" data-icon="location">Map</a></li>
+    </ul>
+</div><!-- /navbar -->
+	</div><!-- /header -->
+<h2 id="disconnectText" style="color:red; text-align: center; display: none;">Ελέγξτε τη σύνδεσή σας</h2>
+	<div role="main" id="mapDiv" >
+            <img id="disconnect" src="img/wifiDisconnect.png" alt="" style="position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;   display:none;" />
+           
+            <iframe id="mapouter" style="display:block; margin:0 auto;" width="600" height="500" src="https://maps.google.com/maps?q=%CF%87%CF%81%CF%85%CF%83%CE%BF%CF%83%CF%84%CF%8C%CE%BC%CE%BF%CF%85%20%CF%83%CE%BC%CF%8D%CF%81%CE%BD%CE%B7%CF%82%203%2C%20%CE%A3%CE%AD%CF%81%CF%81%CE%B5%CF%82&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.embedgooglemap.net"></a>
+            </div>
+
+<div style="">		
+<h4 style="text-align: center;">Χρυσοστόμου Σμύρνης 3, Σέρρες</h4>
+              <div> <a href="tel:23210 51190" style="background-color: inherit; text-decoration: none; color:black;"><p style="text-align:center; display:block; background-color:transparent;">23210 51190</p></a></div>
+              <div> <a href="tel:6987182233" style="background-color: inherit; text-decoration: none; color:black;"><p style="text-align:center;">6987182233</p></a></div>
+</div>	<!-- /footer -->
+
+</div><!-- /page -->
+<script type="text/javascript" charset="utf-8"  src="cordova.js"></script>
+    </body>
+</html>

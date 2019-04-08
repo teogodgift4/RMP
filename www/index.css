@@ -1,0 +1,102 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jan 15, 2019, 11:16:54 AM
+    Author     : laptopTTj
+*/
+#frontPage {
+    background-color: #ffffff;
+    background-image: url('img/logo.png');
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.blink{
+	animation:blinkingText 2s infinite;
+}
+@keyframes blinkingText{
+	0%{	opacity: 0; }
+	25%{	opacity: 0.25;	}
+	50%{	opacity:0.5;	}
+	75%{    opacity: 0.75;	}
+	100%{	opacity: 1;	}
+}
+
+div#smartphonesRepairDialog ul li.ui-li-has-icon a{
+    background-color: #ffffff;
+}
+
+div#smartphonesRepairDialog ul li.ui-li-has-icon a.ui-btn.ui-btn-icon-right.ui-icon-carat-r::after{
+    display:none;
+}
+
+div#laptopRepairDialog ul li.ui-li-has-icon a{
+    background-color: #ffffff;
+}
+
+div#laptopRepairDialog ul li.ui-li-has-icon a.ui-btn.ui-btn-icon-right.ui-icon-carat-r::after{
+    display:none;
+}
+
+div#computerRepairDialog ul li.ui-li-has-icon a{
+    background-color: #ffffff;
+}
+
+div#computerRepairDialog ul li.ui-li-has-icon a.ui-btn.ui-btn-icon-right.ui-icon-carat-r::after{
+    display:none;
+}
+
+ #mapPage {
+    background-color:yellow;
+}
+
+#contactPage, #services{
+  background-color:lightskyblue;  
+}
+/*
+#contactForm input{
+    background-color: lightskyblue;
+}
+
+
+#message{
+    background-color: lightskyblue !important;
+}
+*/
+
+#contactForm label{
+    color:yellow !important;
+}
+
+div.ui-footer.ui-bar-inherit{
+     background-color: yellow !important;
+}
+
+
+.loader {
+  border: 16px solid yellow;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  position:relative;
+  display: block;
+  margin:0 auto;
+  -webkit-animation: spin 2s linear infinite; 
+  animation: spin 2s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
